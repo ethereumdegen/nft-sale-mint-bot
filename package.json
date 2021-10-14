@@ -1,0 +1,40 @@
+{
+  "name": "soliditytemplatemonorepo",
+  "version": "1.0.0",
+  "keywords": [
+    "ethereum",
+    "defi",
+    "nft",
+    "nifty",
+    "options",
+    "react"
+  ],
+  "private": true,
+  "scripts": {
+    "netlify": "yarn contracts export:all && yarn app build",
+    "app:start": "yarn contracts export:all && yarn app start"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@graphprotocol/graph-ts",
+      "**/@graphprotocol/graph-ts/**",
+      "**/hardhat",
+      "**/hardhat/**"
+    ]
+  },
+  "engines": {
+    "node": "14"
+  },
+  "dependencies": {
+    "@typechain/ethers-v5": "^7.1.0",
+    "@types/chai": "^4.2.14",
+    "@types/chai-as-promised": "^7.1.3",
+    "mocha": "^7.1.0",
+    "ts-node": "^9.1.1",
+    "typechain": "^5.0.0",
+    "typescript": "^4.1.3"
+  }
+}
