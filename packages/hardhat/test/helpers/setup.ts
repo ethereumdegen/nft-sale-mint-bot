@@ -20,7 +20,7 @@ export const setup = deployments.createFixture<TestSetupResult, never>(async () 
   const user = await getNamedSigner('borrower')
   const filler = await getNamedSigner('lender')
 
-  const weth9 = await contracts.get<WETH9>('weth9')
+  const weth9 = await contracts.get<WETH9>('WETH9')
    
   
 

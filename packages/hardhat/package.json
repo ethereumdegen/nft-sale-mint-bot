@@ -45,7 +45,7 @@
     "node-watch": "^0.7.0",
     "qrcode-terminal": "^0.12.0",
     "ramda": "^0.27.1",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.3.0",
     "typechain": "^5.2.0",
     "typescript": "^4.1.3"
   },
