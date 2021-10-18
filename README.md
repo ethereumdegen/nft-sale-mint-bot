@@ -2,14 +2,12 @@
 
  
 # 🏄‍♂️ Quick Start (contracts)
-
-Create the .env file in /packages/hardhat according to .env.template
  
 
  
 ## How to Deploy 
 
-use the packages/hardhat folder to deploy and verify nftsale contracts to rinkeby if they are not already 
+use the packages/hardhat folder to deploy and verify the nftsale contracts to rinkeby if they are not already deployed there.  That way you can test the frontend mintbot on them as needed.  
  
 
 ## How to Run Frontend 
