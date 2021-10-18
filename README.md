@@ -1,53 +1,26 @@
-# 🎨 Solidity Template Monorepo 
+# 🎨 NFT Minting Bot 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0f749563-48cc-40bf-beda-52573fd31cef/deploy-status)](https://app.netlify.com/sites/nifty-options/deploys)
  
 # 🏄‍♂️ Quick Start (contracts)
 
 Create the .env file in /packages/hardhat according to .env.template
-
-```bash
-yarn install 
-yarn contracts build 
-yarn contracts test mainnet
-```
+ 
 
  
 ## How to Deploy 
 
-```
-cd packages/hardhat 
-
-yarn deploy --network rinkeby 
-
-yarn etherscan-verify --network rinkeby --license MIT 
-```
+use the packages/hardhat folder to deploy and verify nftsale contracts to rinkeby if they are not already 
+ 
 
 ## How to Run Frontend 
 
-```
-cd packages/hardhat 
+use packages/mintbot to run the auto-minter.
 
-yarn deploy 
+You will need to add your infura key, public address and private key to the .env file (secrets)
 
-yarn chain 
-```
+Then you need to change config/botconfig to point at the correct network (mainnet or rinkeby) and contract address for the sale
 
-#### In a separate terminal
+You need to paste the nft sale contract ABI into salecontractabi  
 
-```
-cd packages/react-app
 
-yarn build 
-
-yarn start 
-```
- 
-
-🔏 Edit your smart contract `*.sol` in `packages/hardhat/contracts`
-
-📝 Edit your frontend `App.jsx` in `packages/react-app/src`
-
-💼 Edit your deployment scripts in `packages/hardhat/deploy`
-
-📱 Open http://localhost:3000 to see the app
+Now just run 'node index.js' to start the bot.  This will poll every second to see when the sale has flipped on.  The moment the sale flips on, your eth tx will be broadcast to the network nodes ahead of all of the slow people trying to fumble with metamask.   
