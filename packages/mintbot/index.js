@@ -43,20 +43,23 @@ async function  attemptMint( web3 ){
 
     if(saleHasStarted){
         console.log('PUNCH IT ')
-        return 
+        
 
         //todo 
         
-        let numberToMint = 1  
-
-        let gasPriceMaxGwei = 2000
-
-        let mintPrice = '123000000000000000'
-
-        let totalMintPrice =    '0.123'    //'615000000000000000' 
+        let numberToMint =  5 
 
 
-        console.log('MINTING')
+       var maxPriorityFee = 22
+
+       let mintGasPriceWei = 1200
+
+       // let mintPrice = '123000000000000000'
+
+        let totalMintPrice = '0.615'   //'615000000000000000' 
+
+
+        console.log('MINTING', totalMintPrice)
 
         let addressFrom = botPublicAddress
         var addressTo = botconfig.salecontractaddress
@@ -77,33 +80,45 @@ async function  attemptMint( web3 ){
         var txData = web3.eth.abi.encodeFunctionCall({
             name: 'mint',
             type: 'function',
+            stateMutability: 'payable',
             inputs: [{
+                internalType:"uint256",
                 type: 'uint256',
                 name: 'numberOfTokens'
             } ]
         }, [ numberToMint ]);
 
+ 
 
 
+    var max_gas_cost = 822619;
 
-    var max_gas_cost = 174624;
-    var mintGasPriceWei = 174624
+   
  
     var estimatedGasCost = null
 
+    console.log(addressFrom, addressTo)
+
     try{
-      estimatedGasCost = await mintMethod.estimateGas({gas: max_gas_cost, from:addressFrom, to: addressTo });
+      estimatedGasCost = await mintMethod.estimateGas({
+        gas: max_gas_cost,
+         from:addressFrom, 
+         to: addressTo, 
+        value: web3utils.toWei(totalMintPrice , "ether")  
+      });
+
     }catch(error){
         console.log(' predictedRevert' )
-    //  return {success:false,reason:'predictedRevert'}
+    return {success:false,reason:'predictedRevert'}
     }
 
-
+    console.log('est gas', estimatedGasCost)
         const txOptions = {
             nonce: web3utils.toHex(txCount),
-            gas: web3utils.toHex(  max_gas_cost  ),
+            gas: estimatedGasCost,
+            maxPriorityFeePerGas:  web3utils.toHex(web3utils.toWei(maxPriorityFee.toString(), 'gwei') ),
             gasPrice: web3utils.toHex(web3utils.toWei(mintGasPriceWei.toString(), 'gwei') ),
-            value: totalMintPrice,
+            value: web3utils.toWei(totalMintPrice , "ether") ,  
             to: addressTo,
             from: addressFrom,
             data: txData
