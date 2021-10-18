@@ -57,7 +57,7 @@
     "test": "test() { TESTING=1 yarn hf \"$1\" test; }; test",
     "compile": "COMPILING=1 hardhat compile",
     "types": "yarn typechain --target ethers-v5 --out-dir types/typechain 'artifacts/!(build-info)/**/+([a-zA-Z0-9_]).json'",
-    "deploy": "hardhat deploy --export-all ../vue-app/src/config/hardhat_contracts.json",
+    "deploy": "hardhat deploy  ",
     "export:all": "hardhat export --export-all ../vue-app/src/config/hardhat_contracts.json",
     "flatten": "hardhat flatten",
     "postdeploy": "hardhat run scripts/publish.js",

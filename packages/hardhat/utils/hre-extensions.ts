@@ -15,14 +15,14 @@ import moment from 'moment'
 
  
 import { Address } from '../types/custom/config-types'
-import { IERC20 } from '../types/typechain'
+ 
 import { formatMsg, FormatMsgConfig } from './formatMsg'
 import { getTokens } from '../config'
 
 declare module 'hardhat/types/runtime' {
   interface HardhatRuntimeEnvironment {
     contracts: ContractsExtension
-    tokens: TokensExtension
+   
     evm: EVM
     getNamedSigner: (name: string) => Promise<Signer>
     toBN: (amount: BigNumberish, decimals?: BigNumberish) => BigNumber
@@ -43,9 +43,7 @@ interface ContractsExtension {
   ) => Promise<C>
 }
 
-interface TokensExtension {
-  get: (name: string) => Promise<IERC20>
-}
+ 
 
 interface EVM {
   /**
@@ -191,20 +189,7 @@ extendEnvironment((hre) => {
       return contract as C
     },
   }
-
-  hre.tokens = {
-    async get(nameOrAddress: string): Promise<IERC20> {
-      let address: string
-      if (ethers.utils.isAddress(nameOrAddress)) {
-        address = nameOrAddress
-      } else {
-        const tokens = getTokens(network)
-        address = tokens.all[nameOrAddress.toUpperCase()]
-      }
-      const abi = nameOrAddress === 'WETH' ? 'IWETH' : 'IERC20'
-      return (await ethers.getContractAt(abi, address)) as IERC20
-    },
-  }
+ 
 
   hre.getNamedSigner = async (name: string): Promise<Signer> => {
     const accounts = await hre.getNamedAccounts()

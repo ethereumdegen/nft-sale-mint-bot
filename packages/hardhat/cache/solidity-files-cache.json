@@ -2,14 +2,14 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/andy/dev/nft-mint-bot/packages/hardhat/contracts/nftsale.sol": {
-      "lastModificationDate": 1634514307006,
-      "contentHash": "b5309ceb257ce708746dcb0cda5a5c51",
+      "lastModificationDate": 1634514779036,
+      "contentHash": "46362966b8bc9962e87f8dae268dafe0",
       "sourceName": "contracts/nftsale.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -44,7 +44,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Doodles"
+        "NFTSale"
       ]
     },
     "/home/andy/dev/nft-mint-bot/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
@@ -55,7 +55,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -105,7 +105,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -149,7 +149,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -194,7 +194,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -238,7 +238,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -280,7 +280,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -324,7 +324,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -366,7 +366,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -408,7 +408,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -450,7 +450,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -494,7 +494,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -536,7 +536,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -580,7 +580,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -627,7 +627,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -676,7 +676,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -718,7 +718,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -762,7 +762,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {
@@ -806,7 +806,7 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "outputSelection": {

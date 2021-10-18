@@ -47,7 +47,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
-contract Doodles is ERC721, ERC721Enumerable, Ownable {
+contract NFTSale is ERC721, ERC721Enumerable, Ownable {
     string public PROVENANCE;
     bool public saleIsActive = false;
     string private _baseURIextended;

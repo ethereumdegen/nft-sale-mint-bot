@@ -20,7 +20,7 @@ const deployOptions: DeployFunction = async (hre) => {
  
 
   const wethDeploy = await deploy({
-    contract: 'WETH9',
+    contract: 'NFTSale',
     args: [ ],
     skipIfAlreadyDeployed: false,
     hre,

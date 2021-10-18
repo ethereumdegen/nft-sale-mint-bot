@@ -105,6 +105,7 @@ const accounts: HardhatNetworkHDAccountsUserConfig = {
   count: 15,
   accountsBalance: ethers.utils.parseEther('100000000').toString(),
 }
+ 
 
 const networkConfig = (config: NetworkUserConfig): NetworkUserConfig => {
   config = {
